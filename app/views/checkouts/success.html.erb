@@ -1,0 +1,6 @@
+<%= @session_id %>
+
+Your total was $<%= @session.amount_total.to_f / 100 %>
+<%= @line_items.each do |item| %>
+  <%= item.description %>
+<% end %>
