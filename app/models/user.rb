@@ -18,7 +18,8 @@ class User < ApplicationRecord
       }
     }
   end
-  
-  private
 
+  def premium?
+    self.charges.any?
+  end
 end
