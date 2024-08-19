@@ -1,31 +1,51 @@
-<div class="navbar bg-base-100 z-50">
-    <div class="flex-1">
-        <%= link_to root_path, class: "btn btn-ghost text-xl" do %>
-            <%= image_tag "logo.png", alt: "Logo", class: "h-8" %>
-            LightningRails
+<div class="navbar bg-base-100">
+  <div class="navbar-start">
+    <div class="dropdown">
+        <%= link_to root_path, class: "btn btn-ghost lg:hidden" do %>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
         <% end %>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <% if user_signed_in? %>
+        <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <% end %>
+      </ul>
     </div>
-    <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-            <li><%= link_to "A Link", "#" %></li>
-            <% if user_signed_in? %>
-                <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
-            <% else %>
-                <li><%= link_to "Log in", new_user_session_path %></li>
-                <li><%= link_to "Sign up", new_user_registration_path %></li>
-            <% end %>
-            <li>
-                <details>
-                <summary>Parent</summary>
-                <ul class="bg-base-100 rounded-t-none p-2">
-                    <li><%= link_to "Child 1", "#" %></li>
-                    <li><%= link_to "Child 2", "#" %></li>
-                </ul>
-                </details>
-            </li>
-            <li>
-                <%= link_to "Start now", "#", class: "btn btn-sm btn-outline btn-primary" %>
-            </li>
-        </ul>
-    </div>
+    <%= link_to root_path, class: "btn btn-ghost text-xl" do %>
+        <%= image_tag "logo.png", alt: "Logo", class: "h-8" %>
+           LightningRails
+    <% end %>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><%= link_to "Documentation", "https://lightningrails.gitbook.io/lightningrails-doc" %>
+      <% if user_signed_in? %>
+      <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+          <li><%= link_to "Log in", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <% if user_signed_in? %>
+    <%= link_to "Dashboard", "#", class: "btn btn-primary" %>
+    <% else %>
+    <%= link_to "Get started", new_user_registration_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
