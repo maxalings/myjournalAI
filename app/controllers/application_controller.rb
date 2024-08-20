@@ -6,4 +6,9 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = current_user.try(:locale) || I18n.default_locale
   end
+
+  # This method overrides Rails.application.default_url_options[:host] to add an absolute URL to meta tags, good for SEO
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end
