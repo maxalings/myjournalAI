@@ -105,3 +105,5 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 2.6"
+
+gem "motor-admin", "~> 0.4.28"

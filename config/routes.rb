@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  authenticate :user, lambda { |u| u.admin? } do
+    mount Motor::Admin => '/motor_admin'
+  end
   devise_for :users
   get 'checkout', to: 'checkouts#show'
   get 'checkout/success', to: 'checkouts#success'
