@@ -22,4 +22,8 @@ class User < ApplicationRecord
   def premium?
     self.charges.any?
   end
+
+  def admin?
+    admin
+  end
 end
