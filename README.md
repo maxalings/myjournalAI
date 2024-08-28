@@ -1,7 +1,7 @@
 
 ![Logo](https://lightningrails.com/assets/logo-3d4a3213987c59701dc127c7d3e893b55b44df382ae52c48d3c6cf6d21dace7d.png)
 
-# Kickstart you Rails app with Lightning Rails
+# Kickstart your Rails app with Lightning Rails
 
 
 Welcome to the Lightning Rails Wiki! This documentation serves as a comprehensive guide for developers looking to kickstart their projects with our Ruby on Rails boilerplate.
@@ -21,5 +21,5 @@ To get started, visit the [Documentation](https://docs.lightningrails.com/)
 
 ## Feedback
 
-If you have any feedback or features suggestion, please follow this link: [Suggest new features](https://insigh.to/b/lightningrails)
+If you have any feedback or feature suggestions, please follow this link: [Suggest new features](https://insigh.to/b/lightningrails)
 
