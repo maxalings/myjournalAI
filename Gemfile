@@ -78,6 +78,15 @@ gem "receipts", "~> 2.0"
 #database
 gem "pg"
 
+#open emails in development
+gem "letter_opener"
+
+# Use Tailwind CSS for styles [https://tailwindcss.com/docs/guides/rails]
+gem "tailwindcss-rails", "~> 2.6"
+
+# Admin interface
+gem "motor-admin", "~> 0.4.28"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -101,6 +110,4 @@ group :test do
 
 end
 
-gem "tailwindcss-rails", "~> 2.6"
 
-gem "motor-admin", "~> 0.4.28"
