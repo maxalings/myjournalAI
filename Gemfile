@@ -111,3 +111,5 @@ group :test do
 end
 
 
+
+gem "lucide-rails", "~> 0.5.1"
