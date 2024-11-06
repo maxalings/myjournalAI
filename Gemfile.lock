@@ -179,6 +179,7 @@ GEM
       rails (>= 5.2)
     msgpack (1.7.2)
     multipart-post (2.4.1)
+    mutex_m (0.2.0)
     net-http (0.4.1)
       uri
     net-imap (0.4.14)
@@ -204,6 +205,7 @@ GEM
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    ostruct (0.6.0)
     paddle (2.5.0)
       faraday (~> 2.0)
     pay (7.3.0)
@@ -353,6 +355,8 @@ DEPENDENCIES
   letter_opener
   lucide-rails (~> 0.5.1)
   motor-admin (~> 0.4.28)
+  mutex_m
+  ostruct
   paddle (~> 2.5)
   pay (~> 7.0)
   pg
@@ -371,7 +375,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.3.5p100
 
 BUNDLED WITH
    2.5.5
