@@ -6,10 +6,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-     <title><%= meta_title %></title>
+    <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
 
-     <%# Facebook Open Graph data  %>
+    <%# Facebook Open Graph data  %>
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= request.original_url %>" />
@@ -26,8 +26,8 @@
     <meta name="twitter:image:src" content="<%= meta_image %>">
 
     <%# Change your favicon in assets/images/favicon.png  %>
-    <%= favicon_link_tag 'favicon.png' %> 
-    
+    <%= favicon_link_tag 'favicon.png' %>
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 

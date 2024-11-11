@@ -1,36 +1,32 @@
 <div class="p-8 md:p-12 lg:px-16 lg:py-24 lg:my-24">
-    <div class="mx-auto max-w-lg text-center">
-        <h2 class="text-2xl font-bold text-base-700 md:text-3xl">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit
-        </h2>
+  <div class="mx-auto max-w-lg text-center">
+    <h2 class="text-2xl font-bold text-base-700 md:text-3xl">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit
+    </h2>
 
-        <p class="hidden text-base-500 sm:mt-4 sm:block">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officia blanditiis
-        repellat in, vero, aperiam porro ipsum laboriosam consequuntur exercitationem incidunt
-        tempora nisi?
-        </p>
+    <p class="hidden text-base-500 sm:mt-4 sm:block">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officia blanditiis
+      repellat in, vero, aperiam porro ipsum laboriosam consequuntur exercitationem incidunt
+      tempora nisi?
+    </p>
+  </div>
+
+  <div class="mx-auto mt-8 max-w-xl">
+    <form action="#" class="sm:flex sm:gap-4">
+    <div class="sm:flex-1">
+      <label for="email" class="sr-only">Email</label>
+
+      <input
+      type="email"
+      placeholder="Email address"
+      class="w-full rounded-md border-base-700 bg-white p-3 text-base-500 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
+      />
     </div>
 
-    <div class="mx-auto mt-8 max-w-xl">
-        <form action="#" class="sm:flex sm:gap-4">
-        <div class="sm:flex-1">
-            <label for="email" class="sr-only">Email</label>
-
-            <input
-            type="email"
-            placeholder="Email address"
-            class="w-full rounded-md border-base-700 bg-white p-3 text-base-500 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
-            />
-        </div>
-
-        <button
-            type="submit"
-            class="btn btn-primary"
-        >
-            <span class="text-sm font-medium"> Sign Up </span>
-
-            <%= lucide_icon("move-right") %>
-        </button>
-        </form>
-    </div>
+    <button type="submit" class="btn btn-primary">
+      <span class="text-sm font-medium"> Sign Up </span>
+      <%= lucide_icon("move-right") %>
+    </button>
+    </form>
+  </div>
 </div>
