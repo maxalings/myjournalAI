@@ -3,12 +3,12 @@
     <div class="lg:hidden dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
         <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
@@ -19,33 +19,33 @@
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <% if user_signed_in? %>
-        <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
-            <li><%= link_to "Log in", new_user_session_path %></li>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><%= link_to "Log in", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
         <% end %>
       </ul>
     </div>
     <%= link_to root_path, class: "btn btn-ghost text-xl" do %>
-        <%= image_tag "logo.png", alt: "Logo", class: "h-8" %>
-          LightningRails
+      <%= image_tag "logo.png", alt: "Logo", class: "h-8" %>
+      LightningRails
     <% end %>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><%= link_to "Documentation", "#" %>
+      <li><%= link_to "Documentation", "#" %></li>
       <% if user_signed_in? %>
-      <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>
-          <li><%= link_to "Log in", new_user_session_path %></li>
+        <li><%= link_to "Log in", new_user_session_path %></li>
       <% end %>
     </ul>
   </div>
   <div class="navbar-end">
     <% if user_signed_in? %>
-    <%= link_to "Dashboard", "#", class: "btn btn-primary" %>
+      <%= link_to "Dashboard", "#", class: "btn btn-primary" %>
     <% else %>
-    <%= link_to "Get started", new_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to "Get started", new_user_registration_path, class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
