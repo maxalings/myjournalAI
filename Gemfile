@@ -1,16 +1,16 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.3.5"
+ruby "3.3.6"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.8", ">= 7.0.8.1"
+gem 'rails', '~> 8.0.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+gem "puma"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -25,7 +25,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
+gem "redis"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -55,22 +55,22 @@ gem "cloudinary"
 gem "postmark-rails"
 
 # payment processing
-gem "pay", "~> 7.0"
+gem "pay"
 
 # To use Stripe, also include:
-gem "stripe", "~> 12.0"
+gem "stripe"
 
 # To use Braintree + PayPal, also include:
-gem "braintree", "~> 4.7"
+gem "braintree"
 
 # To use Paddle Billing or Paddle Classic, also include:
-gem "paddle", "~> 2.5"
+gem "paddle"
 
 # To use Lemon Squeezy, also include:
-gem "lemonsqueezy", "~> 1.0"
+gem "lemonsqueezy"
 
 # To use Receipts gem for creating invoice and receipt PDFs, also include:
-gem "receipts", "~> 2.0"
+gem "receipts"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -82,13 +82,13 @@ gem "pg"
 gem "letter_opener"
 
 # Use Tailwind CSS for styles [https://tailwindcss.com/docs/guides/rails]
-gem "tailwindcss-rails", "~> 2.6"
+gem "tailwindcss-rails"
 
 # Admin interface
-gem "motor-admin", "~> 0.4.28"
+gem "motor-admin"
 
 # Icons
-gem "lucide-rails", "~> 0.5.1"
+gem "lucide-rails"
 
 # Remove Metex_ warning
 gem "mutex_m"
