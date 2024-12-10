@@ -28,12 +28,11 @@
     </div>
     <%= link_to root_path, class: "btn btn-ghost text-xl" do %>
       <%= image_tag "logo.png", alt: "Logo", class: "h-8" %>
-      LightningRails
+      Journal.ai
     <% end %>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><%= link_to "Documentation", "#" %></li>
       <% if user_signed_in? %>
         <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>

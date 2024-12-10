@@ -1,0 +1,12 @@
+<div class="flex flex-col items-center justify-center min-h-screen">
+  <h1 class="text-2xl font-bold mb-4">My journals:</h1>
+
+  <ul class="space-y-2">
+    <% @journals.each do |journal| %>
+      <li>
+        <button class="btn btn-wide"><%= journal.name %></button>
+      </li>
+    <% end %>
+    <li><%= link_to "Create New Journal", new_journal_path, class: "btn btn-wide btn-primary" %></li>
+  </ul>
+</div>
