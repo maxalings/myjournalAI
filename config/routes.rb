@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   get 'terms-and-conditions', to: 'pages#terms'
   get 'privacy-policy', to: 'pages#privacy'
   get 'cookies', to: 'pages#cookies'
+
+  resources :journals
+  resources :journalpages
 end

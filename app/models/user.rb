@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
   pay_customer stripe_attibutes: :stripe_attibutes
-
+  has_many :journals
 
   def stripe_attributes(pay_customer)
     {
