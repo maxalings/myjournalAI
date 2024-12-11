@@ -45,7 +45,6 @@ class JournalpagesController < ApplicationController
     if @journalpage.save
       redirect_to journal_journalpages_path(@journal)
     else
-      raise
       render :new
     end
   end

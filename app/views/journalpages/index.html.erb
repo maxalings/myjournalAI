@@ -14,7 +14,7 @@
         <tr class="hover">
             <th><%= index + 1 %></th>
             <td><%= page.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
-            <td><%= page.prompt %></td>
+            <td><%= truncate(page.prompt, length: 100, omission: "...") %></td>
             <td>
               <%= link_to "Show", journal_journalpage_path(@journal, page), class: "btn btn-sm btn-secondary" %>
               <%= link_to "Delete", journalpage_path(page),
