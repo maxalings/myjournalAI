@@ -129,6 +129,7 @@ GEM
     erubi (1.13.0)
     et-orbi (1.2.11)
       tzinfo
+    event_stream_parser (1.0.0)
     faraday (2.11.0)
       faraday-net_http (>= 2.0, < 3.4)
       logger
@@ -294,6 +295,10 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.3.9)
+    ruby-openai (7.3.1)
+      event_stream_parser (>= 0.3.0, < 2.0.0)
+      faraday (>= 1)
+      faraday-multipart (>= 1)
     rubyzip (2.3.2)
     securerandom (0.4.0)
     selenium-webdriver (4.27.0)
@@ -380,6 +385,7 @@ DEPENDENCIES
   rails (~> 8.0.0)
   receipts
   redis
+  ruby-openai
   selenium-webdriver
   sprockets-rails
   stimulus-rails

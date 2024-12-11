@@ -3,7 +3,9 @@ class JournalsController < ApplicationController
     @journals = Journal.all
   end
 
-
+  def show
+    @journal = Journal.find(params[:id])
+  end
 
   def new
     @journal = Journal.new
@@ -17,6 +19,12 @@ class JournalsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @journal = Journal.find(params[:id])
+    @journal.destroy
+    redirect_to journals_path, status: :see_other
   end
 
   private

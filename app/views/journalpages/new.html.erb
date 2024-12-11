@@ -1,0 +1,11 @@
+<%= form_with(model: @journalpage, url: [@journal, @journalpage]) do |f| %>
+  <div class="flex flex-col items-center justify-center min-h-2/4 mt-0">
+    <div class="mb-4">
+      <%= f.label :answer, @content, class: "text-lg font-medium" %>
+      <%= f.text_area :answer, class: "textarea textarea-bordered w-full h-96 mt-2", rows: 10 %>
+    </div>
+    <div class="form-actions mt-4">
+      <%= f.submit "Save Journal Page", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

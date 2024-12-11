@@ -32,17 +32,17 @@
     <% end %>
   </div>
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
+
+  </div>
+  <div class="navbar-end">
+  <ul class="menu menu-horizontal px-1">
       <% if user_signed_in? %>
         <li><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "Log in", new_user_session_path %></li>
       <% end %>
     </ul>
-  </div>
-  <div class="navbar-end">
     <% if user_signed_in? %>
-      <%= link_to "Dashboard", "#", class: "btn btn-primary" %>
     <% else %>
       <%= link_to "Get started", new_user_registration_path, class: "btn btn-primary" %>
     <% end %>

@@ -1,10 +1,12 @@
-<div class="flex flex-col items-center justify-center min-h-screen">
+<div class="flex flex-col items-center justify-center">
   <h1 class="text-2xl font-bold mb-4">My journals:</h1>
-
   <ul class="space-y-2">
     <% @journals.each do |journal| %>
-      <li>
-        <button class="btn btn-wide"><%= journal.name %></button>
+      <li class="flex items-center space-x-2 relative">
+        <%= link_to journal.name, new_journal_journalpage_path(journal), class: "btn btn-wide" %>
+        <%= link_to lucide_icon("circle-x"), journal_path(journal),
+              data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+              class: "absolute right-0 top-0 transform translate-x-[-12px] translate-y-3 text-[#6b6667]" %>
       </li>
     <% end %>
     <li><%= link_to "Create New Journal", new_journal_path, class: "btn btn-wide btn-primary" %></li>
