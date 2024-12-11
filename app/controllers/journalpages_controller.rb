@@ -5,6 +5,11 @@ class JournalpagesController < ApplicationController
     @journalpages = @journal.journalpages       # Get only the journal pages for the parent journal
   end
 
+  def show
+    @journal = Journal.find(params[:journal_id]) # Find the parent journal
+    @journalpage = Journalpage.find(params[:id]) # Find the parent journal
+  end
+
   def new
     @journal = Journal.find(params[:journal_id])
     @journalpage = Journalpage.new

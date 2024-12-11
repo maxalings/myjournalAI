@@ -6,6 +6,7 @@
     </div>
     <div class="form-actions mt-4">
       <%= f.submit "Save Journal Page", class: "btn btn-primary" %>
+      <%= f.hidden_field :prompt, value: @content %>
     </div>
   </div>
 <% end %>
